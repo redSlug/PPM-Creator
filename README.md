@@ -1,3 +1,10 @@
 # PPM-Creator
 
-`curl -H "Expect:" -H "Content-Type: application/json" -X POST -d "@test_data" 127.0.0.1:8080`
+Web based tool for creating PPM files.
+
+## Setup
+- clone the rep
+- `cd PPM-Creator/ppm_server/`
+- `cargo run` #	after installing rust
+
+![browser example](https://raw.githubusercontent.com/redSlug/PPM-Creator/master/example.png)
