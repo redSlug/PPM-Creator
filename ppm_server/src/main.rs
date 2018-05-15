@@ -147,6 +147,7 @@ fn handle_connection(mut stream: TcpStream) {
     let r = Request::from_stream(&mut stream).unwrap();
     let mut response = format!("HTTP/1.1 {}\r\n\r\n\n{}\n", "400 BAD", "unimplemented");
     if r.method == Method::Get {
+        println!("get request");
         let mut f = File::open("src/index.html").expect("file not found");
         let mut contents = String::new();
         f.read_to_string(&mut contents)

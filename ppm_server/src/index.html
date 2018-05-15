@@ -53,17 +53,15 @@ function submitMatrix(e) {
   e.preventDefault()
   let matrix_data = [].concat.apply([], color_data).join("");
   console.log(matrix_data);
-  let url = "http://127.0.0.1:8080";
+  let url = "/";
   let body_data = JSON.stringify({"data": `cols=${cols}${matrix_data}`});
   var request_data = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
     },
     cache: "no-cache",
     body: body_data,
-    mode: "cors",
   };
   var request = new Request(url);
   fetch(request, request_data);
